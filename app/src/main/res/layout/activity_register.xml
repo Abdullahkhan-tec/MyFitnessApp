@@ -76,11 +76,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Register"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@color/primaryColor"
-                android:padding="16dp"
-                android:layout_marginBottom="16dp"
-                android:letterSpacing="0.05" />
+                android:textColor="#FF8C00"
+            android:backgroundTint="@android:color/white"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
 
             <!-- Back to Login Button -->
             <Button
@@ -88,10 +87,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Back to Login"
-                android:textColor="@color/primaryColor"
-                android:backgroundTint="@color/lightButtonBackground"
-                android:padding="16dp"
-                android:letterSpacing="0.05" />
+                android:textColor="@android:color/white"
+                android:backgroundTint="#FF8C00"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            />
 
             <!-- Progress Bar -->
             <ProgressBar

@@ -14,7 +14,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000" /> <!-- 50% black overlay -->
+        android:background="#80000000" />
 
     <!-- Scrollable login content -->
     <ScrollView
@@ -77,10 +77,9 @@
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/primaryColor"
+                android:backgroundTint="#FF8C00"
                 android:padding="16dp"
-                android:layout_marginBottom="16dp"
-                android:letterSpacing="0.05" />
+                android:layout_marginBottom="16dp" />
 
             <!-- Register Button -->
             <Button
@@ -88,10 +87,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Register"
-                android:textColor="@color/primaryColor"
-                android:backgroundTint="@color/lightButtonBackground"
+                android:textColor="#FF8C00"
+                android:backgroundTint="@android:color/white"
                 android:padding="16dp"
-                android:letterSpacing="0.05" />
+                android:layout_marginBottom="16dp" />
 
             <!-- Progress Bar -->
             <ProgressBar
@@ -101,6 +100,7 @@
                 android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginTop="24dp"/>
+
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
