@@ -40,7 +40,7 @@ public class WorkoutActivity extends AppCompatActivity {
     }
 
     private String getMuscleGainWorkout() {
-        return "💪 MUSCLE GAIN WORKOUT\n\n" +
+        return " MUSCLE GAIN WORKOUT\n\n" +
                 "Warm-up:\n• Jumping Jacks – 5 min\n\n" +
                 "Exercises:\n" +
                 "• Push-ups – 4 x 12\n" +
@@ -52,7 +52,7 @@ public class WorkoutActivity extends AppCompatActivity {
     }
 
     private String getBalancedWorkout() {
-        return "⚖️ BALANCED WORKOUT\n\n" +
+        return "⚖ BALANCED WORKOUT\n\n" +
                 "Warm-up:\n• Brisk Walking – 5 min\n\n" +
                 "Exercises:\n" +
                 "• Push-ups – 3 x 10\n" +
@@ -63,7 +63,7 @@ public class WorkoutActivity extends AppCompatActivity {
     }
 
     private String getFatLossWorkout() {
-        return "🔥 FAT LOSS WORKOUT\n\n" +
+        return " FAT LOSS WORKOUT\n\n" +
                 "Warm-up:\n• Skipping – 5 min\n\n" +
                 "Exercises:\n" +
                 "• Jogging – 30 min\n" +

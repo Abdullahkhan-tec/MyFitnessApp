@@ -6,57 +6,58 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MealDetailActivity extends AppCompatActivity {
 
-    TextView tvTitle, tvPlan;
+    TextView tvBreakfast, tvLunch, tvDinner, tvSnacks, tvMealTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meal_detail);
 
-        tvTitle = findViewById(R.id.tvTitle);
-        tvPlan = findViewById(R.id.tvPlan);
+        tvMealTitle = findViewById(R.id.tvMealTitle);
+        tvBreakfast = findViewById(R.id.tvBreakfast);
+        tvLunch = findViewById(R.id.tvLunch);
+        tvDinner = findViewById(R.id.tvDinner);
+        tvSnacks = findViewById(R.id.tvSnacks);
 
         String type = getIntent().getStringExtra("MEAL_TYPE");
-
         if (type == null) return;
 
         switch (type) {
             case "GAIN":
-                tvTitle.setText("Weight Gain Plan");
-                tvPlan.setText(getGainPlan());
+                tvMealTitle.setText("Weight Gain Plan");
+                setGainMeal();
                 break;
+
             case "LOSS":
-                tvTitle.setText("Weight Loss Plan");
-                tvPlan.setText(getLossPlan());
+                tvMealTitle.setText("Weight Loss Plan");
+                setLossMeal();
                 break;
+
             case "MAINTAIN":
-                tvTitle.setText("Maintenance Plan");
-                tvPlan.setText(getMaintainPlan());
+                tvMealTitle.setText("Maintenance Plan");
+                setMaintainMeal();
                 break;
         }
     }
 
-    private String getGainPlan() {
-        return "🍗 WEIGHT GAIN PLAN\n\n" +
-                "Breakfast:\n• Oats with milk\n• Banana\n• Peanut butter\n\n" +
-                "Lunch:\n• Rice\n• Grilled chicken\n• Yogurt\n\n" +
-                "Dinner:\n• Eggs (3)\n• Brown bread\n\n" +
-                "Daily Calories:\n• ~2800 kcal/day";
+    private void setGainMeal() {
+        tvBreakfast.setText("• Eggs + Brown Bread\n• Milk + Banana");
+        tvLunch.setText("• Rice + Chicken\n• Yogurt");
+        tvDinner.setText("• Roti + Meat\n• Salad");
+        tvSnacks.setText("• Nuts + Peanut Butter");
     }
 
-    private String getLossPlan() {
-        return "🥗 WEIGHT LOSS PLAN\n\n" +
-                "Breakfast:\n• Fruits bowl\n• Green tea\n\n" +
-                "Lunch:\n• Mixed vegetable salad\n• Grilled fish\n\n" +
-                "Dinner:\n• Vegetable soup\n• Boiled vegetables\n\n" +
-                "Daily Calories:\n• ~1800 kcal/day";
+    private void setLossMeal() {
+        tvBreakfast.setText("• Oats + Green Tea");
+        tvLunch.setText("• Boiled Chicken\n• Vegetables");
+        tvDinner.setText("• Salad + Soup");
+        tvSnacks.setText("• Avoid Sugar & Fast Food");
     }
 
-    private String getMaintainPlan() {
-        return "⚖️ MAINTENANCE PLAN\n\n" +
-                "Breakfast:\n• Eggs (2)\n• Brown toast\n\n" +
-                "Lunch:\n• Chapati\n• Chicken curry\n• Salad\n\n" +
-                "Dinner:\n• Rice\n• Vegetables\n\n" +
-                "Daily Calories:\n• ~2200 kcal/day";
+    private void setMaintainMeal() {
+        tvBreakfast.setText("• Eggs + Toast");
+        tvLunch.setText("• Rice + Chicken");
+        tvDinner.setText("• Roti + Vegetables");
+        tvSnacks.setText("• Fruits");
     }
 }

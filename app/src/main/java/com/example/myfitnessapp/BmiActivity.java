@@ -20,7 +20,6 @@ public class BmiActivity extends AppCompatActivity {
         etWeight = findViewById(R.id.etWeight);
         btnCalculate = findViewById(R.id.btnCalculate);
         tvResult = findViewById(R.id.tvResult);
-
         btnCalculate.setOnClickListener(v -> calculateBMI());
     }
 

@@ -10,9 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFitnessApp">
         <activity
-            android:name=".MealsDetailActivity"
+            android:name=".SupplementDetaiActivity"
             android:exported="false" />
-        <!-- SPLASH SCREEN (LAUNCHER) -->
+        <activity
+            android:name=".SupplementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProgressTrackerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealsDetailActivity"
+            android:exported="false" /> <!-- SPLASH SCREEN (LAUNCHER) -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">

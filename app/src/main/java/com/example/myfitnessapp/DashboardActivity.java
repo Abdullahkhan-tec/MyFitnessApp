@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    LinearLayout bmiCard, workoutCard, mealCard;
+    LinearLayout bmiCard, workoutCard, mealCard, progressCard, tipsCard, supplementCard;
     String bmiCategory;
 
     @Override
@@ -19,32 +19,38 @@ public class DashboardActivity extends AppCompatActivity {
         bmiCard = findViewById(R.id.cardBMI);
         workoutCard = findViewById(R.id.cardWorkout);
         mealCard = findViewById(R.id.cardMeal);
+        progressCard = findViewById(R.id.cardProgress);
+        tipsCard = findViewById(R.id.cardTips);
+        supplementCard = findViewById(R.id.cardSupplements);
 
-        // Receive BMI Category
         bmiCategory = getIntent().getStringExtra("BMI_CATEGORY");
 
         bmiCard.setOnClickListener(v ->
-                startActivity(new Intent(DashboardActivity.this, BmiActivity.class))
+                startActivity(new Intent(this, BmiActivity.class))
         );
 
-        workoutCard.setOnClickListener(v -> {
-            if (bmiCategory == null) {
-                Toast.makeText(this, "Please calculate BMI first", Toast.LENGTH_SHORT).show();
-                return;
-            }
-            Intent intent = new Intent(DashboardActivity.this, WorkoutActivity.class);
-            intent.putExtra("BMI_CATEGORY", bmiCategory);
-            startActivity(intent);
-        });
+        workoutCard.setOnClickListener(v -> openWithBMI(WorkoutActivity.class));
+        mealCard.setOnClickListener(v -> openWithBMI(MealActivity.class));
+        supplementCard.setOnClickListener(v -> openWithBMI(SupplementActivity.class));
 
-        mealCard.setOnClickListener(v -> {
-            if (bmiCategory == null) {
-                Toast.makeText(this, "Please calculate BMI first", Toast.LENGTH_SHORT).show();
-                return;
-            }
-            Intent intent = new Intent(DashboardActivity.this, MealActivity.class);
-            intent.putExtra("BMI_CATEGORY", bmiCategory);
-            startActivity(intent);
+        progressCard.setOnClickListener(v ->
+                startActivity(new Intent(this, ProgressTrackerActivity.class))
+        );
+
+        tipsCard.setOnClickListener(v -> {
+            Intent i = new Intent(this, TipsActivity.class);
+            i.putExtra("BMI_CATEGORY", bmiCategory);
+            startActivity(i);
         });
+    }
+
+    private void openWithBMI(Class<?> cls) {
+        if (bmiCategory == null) {
+            Toast.makeText(this, "Please calculate BMI first", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent i = new Intent(this, cls);
+        i.putExtra("BMI_CATEGORY", bmiCategory);
+        startActivity(i);
     }
 }

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -7,7 +6,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/dashboard_bg"
+        android:src="@drawable/dashboards_bg"
         android:scaleType="centerCrop" />
 
     <!-- Semi-transparent overlay -->
@@ -29,7 +28,6 @@
             android:padding="24dp"
             android:gravity="center_horizontal">
 
-            <!-- Dashboard Title -->
             <TextView
                 android:id="@+id/tvDashboardTitle"
                 android:layout_width="wrap_content"
@@ -52,13 +50,10 @@
                 android:gravity="center_vertical"
                 android:clickable="true"
                 android:focusable="true">
-
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_bmi"
-                    android:contentDescription="BMI Icon" />
-
+                    android:src="@drawable/ic_bmi" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -80,13 +75,10 @@
                 android:gravity="center_vertical"
                 android:clickable="true"
                 android:focusable="true">
-
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_workout"
-                    android:contentDescription="Workout Icon" />
-
+                    android:src="@drawable/ic_workout" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -108,17 +100,91 @@
                 android:gravity="center_vertical"
                 android:clickable="true"
                 android:focusable="true">
-
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_meal"
-                    android:contentDescription="Meal Icon" />
-
+                    android:src="@drawable/ic_meal" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Meal Plans"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:paddingStart="16dp"/>
+            </LinearLayout>
+            <!-- Supplements Card -->
+            <LinearLayout
+                android:id="@+id/cardSupplements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background"
+                android:padding="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_supplement" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Supplements"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:paddingStart="16dp"/>
+            </LinearLayout>
+
+
+            <!-- Progress Tracker Card -->
+            <LinearLayout
+                android:id="@+id/cardProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background"
+                android:padding="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_progress" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Progress Tracker"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:paddingStart="16dp"/>
+            </LinearLayout>
+
+            <!-- Tips Card -->
+            <LinearLayout
+                android:id="@+id/cardTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background"
+                android:padding="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_tips" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fitness Tips"
                     android:textSize="18sp"
                     android:textColor="@android:color/black"
                     android:paddingStart="16dp"/>
